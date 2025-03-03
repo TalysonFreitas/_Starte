@@ -1,0 +1,56 @@
+footer{
+    background-color: #1F1F1F;
+    padding: 50px 0;
+}
+
+footer .container{
+    display: flex;
+    color: #FFFFFF;
+    flex-wrap: wrap;
+}
+
+.footer-elem {
+        padding: 0 15px;
+}
+
+footer .container ul{
+    width: 50%;
+    list-style: none;
+}
+
+footer .footer-elem h3{
+    margin-bottom: 10px;
+    font-weight: 700;
+    width: 300%;
+}
+
+.footer-elem ul li{
+    margin: 10px 0;
+}
+
+footer .footer-elem .redes-sociais{
+    margin-top: 30px;
+    gap: 10%;
+}
+
+footer .container ul > p{
+    margin-bottom: 10px;
+}
+
+footer .container li{
+    margin: 10px 0;
+    width: 300%;
+}
+
+footer .container a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer .container .footer-bottom{
+    margin: 0 auto;
+}
+
+footer .container i{
+    padding-right: 10px;
+}
