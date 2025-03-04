@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load permission_tags %}
+{% load role_filters %}  
+
+{% block 'head' %}
+
+{% endblock %}
+
+{% block content %}
+    {% if not user.is_authenticated %}
+        {% include 'partials/navbar_semlogin.html' %}
+        <p>Conteúdo da página sem login</p>
+    {% else %}
+        {% include 'partials/navbar_comlogin.html' %}
+
+        {% if user|has_role:"hibrido" %}
+
+            <h1>Bem-vindo, {{ request.user.username }}</h1>
+            <p>Você pode oferecer e contratar serviços.</p>
+
+        {% elif user|has_role:"artista" %}
+            <h1>Bem-vindo, {{ request.user.username }}</h1>
+            <p>Aqui você pode oferecer seus serviços.</p>
+            
+        {% elif user|has_role:"comprador" %}
+            <h1>Bem-vindo, {{ request.user.username }}</h1>
+            <p>Aqui você pode contratar serviços.</p>
+        
+        {% endif %}
+    
+    {% endif %}
+
+{% include 'partials/footer.html' %}
+{% endblock %}

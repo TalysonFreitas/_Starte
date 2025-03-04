@@ -1,0 +1,13 @@
+{% load static %}
+
+<form action="{% url 'ver_usuarios' %}" method="get">
+    <h1> Esta é uma lista com todos os usuarios cadastrados no sistemas: </h1>
+
+    {% for usuario in usuarios %}
+
+        <h3> usuario: {{ usuario.id }}</h3>
+            <h3>user: {{ usuario.username }}</h3>
+            <h3>tipo: {{ usuario.tipo }}</h3>
+
+    {% endfor %}
+</form>

@@ -1,0 +1,16 @@
+{% load static %}
+
+<form action="{% url 'redefinir_senha' %}" method="POST">
+    {% csrf_token %}
+
+   <!-- <label for="senha_antiga">Senha Antiga:</label>
+    <input type="password" name="senha_antiga" id="senha_antiga" placeholder="Digite sua senha atual" required>
+-->
+    <label for="nova_senha">Nova Senha:</label>
+    <input type="password" name="nova_senha" id="nova_senha" placeholder="Digite sua nova senha" required>
+
+    <label for="confirmar_senha">Confirme a Nova Senha:</label>
+    <input type="password" name="conf_senha" id="confirmar_senha" placeholder="Confirme sua nova senha" required>
+
+    <button type="submit">Redefinir Senha</button>
+</form>

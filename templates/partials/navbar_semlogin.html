@@ -1,0 +1,23 @@
+{% load static %}
+    <header class="navbar">
+        <div class="logo" alt="logo">Starte</div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#">home</a></li>
+                <li><a href="#">artistas</a></li>
+                <li><a href="#">categorias</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar..." />
+            <button class="search-btn"><i class="bi bi-search"></i></button>
+        </div>
+
+        <div class="buttons">
+            <a href="{% url 'login_view' %}"><button class="login">Login</button></a>
+            <a href="{% url 'criar_usuario' %}"><button class="cadastro">Cadastro</button></a>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'head' %}
+
+  <link rel="stylesheet" href="{% static '/login.css' %}"/>
+{% endblock %}
+
+{% block content %}
+     {% include "partials/basicnav.html" %}
+      <main class="container">
+        <h2 class="titulo">Acessar conta</h2>
+        <section class="form-container">
+            <p class="register-text">Novo por aqui? <a href="{% url 'criar_usuario' %}">Registre-se</a></p>
+            <form action="{% url 'login_view' %}" method="POST">
+              {% csrf_token %}
+                <label for="usuario">Usuário *</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Insira seu usuário">
+
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" placeholder="Insira seu email">
+
+                <label for="senha">Senha *</label>
+                <input type="password" id="senha" name="senha" placeholder="Insira sua senha">
+
+                <a href="{% url 'redefinir_senha' %}" class="forgot-password">Esqueci a senha</a>
+
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white; /* Agora os textos ficam visíveis */
+}
+.navbar {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    justify-content: space-between; /* Mantém os botões no final */
+}
+
+/* 🔹 Logo */
+.logo {
+    font-family: "Lexend", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #24252A;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* 🔹 Links mais próximos da logo */
+.nav_links {
+    list-style: none;
+    display: flex;
+}
+
+.nav_links li {
+    padding: 0px 10px;
+}
+
+.nav_links li a {
+    font-family: "Lexend", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #24252A;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav_links li a:hover {
+    color: #C43BAD;
+}
+
+/* 🔎 Barra de pesquisa centralizada */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 3px;
+    border-radius: 10px;
+    border: 1px solid #C43BAD;
+    width: 50%; 
+    max-width: 500px;
+    justify-content: space-between;
+    margin: 0 auto; 
+}
+
+.search-bar input {
+    font-family: "Lexend", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #24252A;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    width: 100%;
+    background: white;
+}
+
+.search-bar .search-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 5px;
+}
+
+i {
+    color: #C43BAD;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; 
+}
+
+button {
+    font-family: "Lexend", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login {
+    color: #C43BAD;
+    background-color: #FFFFFF;
+}
+
+.cadastro {
+    background-color: #C43BAD;
+}
+
+.login:hover {
+    color: #FFFFFF;
+    background-color: #C43BAD;
+}
+
+.cadastro:hover {
+    background-color: #24252A;
+}

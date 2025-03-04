@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static '/cadastro.css' %}"/>
+{% endblock %}
+{% block content %}
+    {% include "partials/basicnav.html" %}
+    
+    <div class="form-wrapper">
+        <h2 class="titulo">Criar conta</h2>
+        <main class="container">
+            <section class="form-container">
+                <form action="{% url 'criar_usuario' %}" method="POST">
+                    {% csrf_token %}
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" name="nome_completo" placeholder="Insira seu nome completo">
+                    
+                    <label for="usuario">Usuário *</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Insira seu usuário">
+                    
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" placeholder="Insira seu email">
+                    
+                    <label for="senha">Senha *</label>
+                    <input type="password" id="senha" name="senha" placeholder="Insira sua senha">
+                    
+                    <label for="confirmar-senha">Confirme a senha *</label>
+                    <input type="password" id="confirmar-senha" name="conf_senha" placeholder="Confirme sua senha">
+                    
+                    <div class="radio-group">
+                        <input type="radio" id="oferecer" name="tipo" value="oferecer" checked>
+                        <label for="oferecer">Quero oferecer meu serviço</label>
+                        
+                        <input type="radio" id="contratar" name="tipo" value="contratar">
+                        <label for="contratar">Quero contratar um serviço</label>
+
+                        <input type="radio" id="hibrido" name="tipo" value="hibrido">
+                        <label for="contratar">Quero contratar e oferecer um serviço</label>
+                    </div>
+                    
+                    <button type="submit">Criar conta</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+{% endblock %}

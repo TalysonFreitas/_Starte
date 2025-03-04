@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #24252A;
+}
+
+.navbar {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que o conteúdo seja ajustado quando necessário */
+}
+
+.logo {
+    font-family: "Lexend", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #24252A;
+    cursor: pointer;
+    margin-right: 20px;
+    flex-grow: 1; /* Permite que o logo ocupe o espaço disponível */
+}
+
+/* Links próximos da logo */
+.nav_links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite a quebra de linha se necessário */
+    gap: 10px;
+}
+
+.nav_links li {
+    padding: 0px 10px;
+}
+
+.nav_links li a {
+    font-family: "Lexend", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #24252A;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav_links li a:hover {
+    color: #C43BAD;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    margin-left: 50px;
+    padding: 3px;
+    border-radius: 10px;
+    border: 1px solid #C43BAD;
+    width: 50%;
+    max-width: 500px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.search-bar input {
+    font-family: "Lexend", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #24252A;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    width: 100%;
+    background: white;
+}
+
+.search-bar .search-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.search-btn > i{
+    color: #C43BAD;
+}
+
+.nav_links2 {
+    list-style: none;
+    display: flex;
+    color: #24252A;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.nav_links2 li {
+    padding: 0px 10px;
+}
+
+.nav_links2 li a {
+    font-family: "Lexend", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #24252A;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav_links2 li a:hover {
+    color: #C43BAD;
+}
+
+/* 📱 Media Queries para telas pequenas */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    .nav_links2 {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav_links2 li {
+        text-align: center;
+    }
+}
+
+/* 🖥️ Media Queries para telas muito pequenas */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .nav_links li a {
+        font-size: 14px;
+    }
+
+    .search-bar {
+        width: 90%;
+    }
+
+    .nav_links2 {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav_links2 li {
+        text-align: center;
+    }
+}
