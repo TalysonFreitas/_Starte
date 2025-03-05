@@ -7,16 +7,15 @@
 }
 
 body {
-    background-color: #24252A;
+    background-color: #d1d1d1;
 }
 
 .navbar {
     background-color: #FFFFFF;
     display: flex;
-    align-items: center;
+    align-items: center; /* Garante alinhamento vertical */
     padding: 10px 30px;
     justify-content: space-between;
-    flex-wrap: wrap; /* Permite que o conteúdo seja ajustado quando necessário */
 }
 
 .logo {
@@ -25,20 +24,18 @@ body {
     font-weight: bold;
     color: #24252A;
     cursor: pointer;
-    margin-right: 20px;
-    flex-grow: 1; /* Permite que o logo ocupe o espaço disponível */
+    margin-right: 0;
 }
 
-/* Links próximos da logo */
+/* 🔹 Links mais próximos da logo */
 .nav_links {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Permite a quebra de linha se necessário */
-    gap: 10px;
+    align-items: center; /* Alinha os itens ao centro */
 }
 
 .nav_links li {
-    padding: 0px 10px;
+    padding: 0px 20px;
 }
 
 .nav_links li a {

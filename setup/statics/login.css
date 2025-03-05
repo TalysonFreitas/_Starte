@@ -10,23 +10,6 @@ body {
     background-color: #d1d1d1;
 }
 
-.navbar {
-    background-color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    padding: 13.5px 30px;
-    justify-content: space-between;
-}
-
-/* 🔹 Logo */
-.logo {
-    font-family: "Lexend", sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: #24252A;
-    cursor: pointer;
-    margin-right: 20px;
-}
 
 .header {
     background-color: #000;

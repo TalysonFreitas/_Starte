@@ -5,17 +5,16 @@
     margin: 0;
     padding: 0;
 }
-
 body {
-    background-color: black;
-    color: white; /* Agora os textos ficam visíveis */
+    background-color: #d1d1d1;
 }
+
 .navbar {
     background-color: #FFFFFF;
     display: flex;
-    align-items: center;
+    align-items: center; /* Garante alinhamento vertical */
     padding: 10px 30px;
-    justify-content: space-between; /* Mantém os botões no final */
+    justify-content: space-between;
 }
 
 /* 🔹 Logo */
@@ -32,6 +31,8 @@ body {
 .nav_links {
     list-style: none;
     display: flex;
+    align-items: center; /* Alinha os itens ao centro */
+    height: 100%; /* Garante que tenha a mesma altura da navbar */
 }
 
 .nav_links li {
@@ -85,7 +86,7 @@ body {
     padding: 5px;
 }
 
-i {
+.search-btn > i {
     color: #C43BAD;
 }
 
@@ -117,8 +118,7 @@ button {
 }
 
 .login:hover {
-    color: #FFFFFF;
-    background-color: #C43BAD;
+    color: #24252A;
 }
 
 .cadastro:hover {
